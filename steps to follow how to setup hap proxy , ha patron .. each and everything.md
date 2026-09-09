@@ -273,7 +273,7 @@ DB2_IP
 
 ---
 
-# PART 4 — Connect using SSM
+# PART 4 — Connect using SSM (if you connect your all db and backned server from ssm seperately you no ned to run these kind of commands "aws ssm start-session --target <BACKEND_INSTANCE_ID>" ) its only for connect to the db1, db2 server those are already you connected thorugh ssm .
 
 From your local computer:
 
