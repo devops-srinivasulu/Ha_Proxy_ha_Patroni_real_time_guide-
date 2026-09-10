@@ -1243,6 +1243,7 @@ postgresql:
   listen: 0.0.0.0:5432
   connect_address: DB1_IP:5432
   data_dir: /var/lib/postgresql/16/main
+  bin_dir: /usr/lib/postgresql/16/bin
 
   authentication:
     superuser:
@@ -1344,6 +1345,7 @@ postgresql:
   listen: 0.0.0.0:5432
   connect_address: DB2_IP:5432
   data_dir: /var/lib/postgresql/16/main
+  bin_dir: /usr/lib/postgresql/16/bin
 
   authentication:
     superuser:
