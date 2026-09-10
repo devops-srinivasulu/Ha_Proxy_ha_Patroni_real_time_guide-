@@ -1895,7 +1895,7 @@ psql (PostgreSQL) 16.15
 On BACKEND:
 
 ```bash
-sudo -u postgres psql -h 127.0.0.1 -p 5000 -d ha_test -c "SELECT pg_is_in_recovery();"
+psql -h 127.0.0.1 -p 5000 -U postgres -d ha_test -c "SELECT pg_is_in_recovery();"
 ```
 
 Expected:
