@@ -1878,7 +1878,20 @@ DB2 = don't send writes here
 ---
 
 # PART 38 — Test HAProxy itself
-
+Install PostgreSQL client on BACKEND
+RUN ON: BACKEND
+```
+sudo apt update
+sudo apt install -y postgresql-client-16
+```
+Verify:
+```
+psql --version
+```
+You should see something like:
+```
+psql (PostgreSQL) 16.15
+```
 On BACKEND:
 
 ```bash
