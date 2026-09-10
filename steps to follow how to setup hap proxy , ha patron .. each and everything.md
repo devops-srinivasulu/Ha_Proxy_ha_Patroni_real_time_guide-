@@ -1443,6 +1443,18 @@ Use the same service file.
 This is where PostgreSQL HA actually comes alive.
 
 Start **DB1 first**.
+* run these commnads on both db1, db2:
+```
+sudo pg_dropcluster --stop 16 main
+```
+verify :
+```
+pg_lsclusters
+```
+expected output is :
+```
+Ver Cluster Port Status Owner Data directory Log file
+```
 
 ## RUN ON: DB1
 
