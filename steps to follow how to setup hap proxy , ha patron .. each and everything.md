@@ -2086,7 +2086,7 @@ It does **not** need to know DB1 or DB2 changed roles.
 Run on BACKEND:
 
 ```bash
-sudo -u postgres psql -h 127.0.0.1 -p 5000 -d ha_test -c "SELECT pg_is_in_recovery();"
+psql -h 127.0.0.1 -p 5000 -U postgres -d ha_test -c "SELECT pg_is_in_recovery();"
 ```
 
 Expected:
@@ -2114,13 +2114,13 @@ This proves writes are now going to DB2.
 ## BACKEND
 
 ```bash
-sudo -u postgres psql -h 127.0.0.1 -p 5000 -d ha_test -c "INSERT INTO employees (name, department) VALUES ('Failover-Test', 'DevOps');"
+psql -h 127.0.0.1 -p 5000 -U postgres -d ha_test -c "INSERT INTO employees (name, department) VALUES ('Failover-Test', 'DevOps');"
 ```
 
 Then:
 
 ```bash
-sudo -u postgres psql -h 127.0.0.1 -p 5000 -d ha_test -c "SELECT * FROM employees;"
+ psql -h 127.0.0.1 -p 5000 -U postgres -d ha_test -c "SELECT * FROM employees;"
 ```
 
 You should see:
