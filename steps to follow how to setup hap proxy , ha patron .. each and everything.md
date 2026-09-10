@@ -1926,7 +1926,7 @@ PRIMARY
 ## BACKEND
 
 ```bash
-sudo -u postgres psql -h 127.0.0.1 -p 5000 -d ha_test -c "SELECT * FROM employees;"
+psql -h 127.0.0.1 -p 5000 -U postgres -d ha_test -c "SELECT * FROM employees;"
 ```
 
 You should see the records.
@@ -1934,13 +1934,13 @@ You should see the records.
 Now insert through HAProxy:
 
 ```bash
-sudo -u postgres psql -h 127.0.0.1 -p 5000 -d ha_test -c "INSERT INTO employees (name, department) VALUES ('HAProxy-Test', 'DevOps');"
+psql -h 127.0.0.1 -p 5000 -U postgres -d ha_test -c "INSERT INTO employees (name, department) VALUES ('HAProxy-Test', 'DevOps');"
 ```
 
 Check:
 
 ```bash
-sudo -u postgres psql -h 127.0.0.1 -p 5000 -d ha_test -c "SELECT * FROM employees;"
+psql -h 127.0.0.1 -p 5000 -U postgres -d ha_test -c "SELECT * FROM employees;"
 ```
 
 ---
