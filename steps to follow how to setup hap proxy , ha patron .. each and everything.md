@@ -1442,8 +1442,8 @@ Use the same service file.
 
 This is where PostgreSQL HA actually comes alive.
 
-Start **DB1 first**.
-* run these commnads on both db1, db2:
+
+* run these commnads on both DB1, DB2:
 ```
 sudo pg_dropcluster --stop 16 main
 ```
